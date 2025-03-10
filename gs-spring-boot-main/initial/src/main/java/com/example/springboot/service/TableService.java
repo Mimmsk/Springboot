@@ -22,7 +22,7 @@ public class TableService {
     
     // Retrieve Table by ID
     public Optional<Table> getTableById(Long id) {
-        return tableRespository.findById(id);
+        return tableRepository.findById(id);
     }
     
     //Add table
@@ -41,7 +41,7 @@ public class TableService {
     }
 
     //Delete table
-    public void deletTable(Long id) {
+    public void deleteTable(Long id) {
         tableRepository.deleteById(id);
     }
 
