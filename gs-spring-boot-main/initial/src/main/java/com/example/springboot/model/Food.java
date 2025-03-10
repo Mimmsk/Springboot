@@ -2,11 +2,14 @@ package com.example.springboot.model;
 
 import jakarta.persistence.*;
 
-
+//Annotation to mark this class as a JPA entity
 @Entity
+// Annotation to specify the table name in database
 @Table(name = "food")
 public class Food {
+    // Annotation to mark this field as primary key
     @Id
+    // Annotation to specify that ID is auto-generated
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;

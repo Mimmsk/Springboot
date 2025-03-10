@@ -1,14 +1,21 @@
 package com.example.springboot.model;
 
+import org.springframework.data.annotation.Id;
+
 import jakarta.persistence.*;
 
+//Annotation to mark this class as a JPA entity
 @Entity
+// Annotation to specify the table name in database
 @Table(name = "orders")
 public class Order {
+    // Annotation to mark this field as primary key
     @Id
+    // Annotation to specify that ID is auto-generated
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // Annotations to specify columns cannot contain null values
     @Column(nullable = false)
     private String productName;
 
@@ -18,6 +25,7 @@ public class Order {
     @Column(nullable = false)
     private double price;
 
+    // Constructor creates order with given values
     public Order() {}
     
     public Order(String productName, int quantity, double price) {
