@@ -1,6 +1,8 @@
 package com.example.springboot.model;
 
-import jakarta.persistence.*;
+import javax.annotation.processing.Generated;
+
+-Type;;
 
 //Annotation to mark this class as a JPA entity
 @Entity
@@ -10,7 +12,7 @@ public class Food {
     // Annotation to mark this field as primary key
     @Id
     // Annotation to specify that ID is auto-generated
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Generated(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private double price;

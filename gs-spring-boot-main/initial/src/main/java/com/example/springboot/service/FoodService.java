@@ -23,7 +23,7 @@ public class FoodService {
 
     // Retrieve food by ID
     public Optional<Food> getFoodById(Long id) {
-        return foodRepository.findById(id);
+        return foodRepository.findAllById(id);
     }
     // add new food type
     public Food addFood(Food food) {
@@ -32,7 +32,7 @@ public class FoodService {
 
     // Updates food type
     public Food updateFood(Long id, Food updatedFood) {
-        return foodRepository.findById(id)
+        return foodRepository.findAllById(id)
                .map(food -> {
                     food.setName(updatedFood.getName());
                     food.setPrice(updatedFood.getPrice());

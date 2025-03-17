@@ -1,8 +1,9 @@
 package com.example.springboot.model;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
 
-import jakarta.persistence.*;
+
+
 
 //Annotation to mark this class as a JPA entity
 @Entity
